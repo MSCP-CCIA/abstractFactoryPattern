@@ -14,7 +14,7 @@ public class viewExamenes {
     private JButton crearButton;
     private JPanel viewExamen;
 
-    public viewExamenes() {
+    public viewExamenes(int revision_id, String revision_date, String estado_revision, String tipo_autorización) {
         crearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

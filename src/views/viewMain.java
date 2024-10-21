@@ -17,21 +17,26 @@ public class viewMain extends JFrame{
         revisiónBasicaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new viewAutorización(Integer.parseInt(revision_id.getText()), revision_date.getText(),
+                        estado_revision.getText(), "Basica");
             }
         });
+
         revisiónEspecializadaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new viewAutorización(Integer.parseInt(revision_id.getText()), revision_date.getText(),
+                        estado_revision.getText(), "Especializada");
             }
         });
+
         buscarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
             }
         });
+
         setContentPane(viewMain);
         setTitle("View");
         setSize(800, 800);
