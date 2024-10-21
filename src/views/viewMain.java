@@ -1,5 +1,7 @@
 package views;
 
+import Controller.ObjectController;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,13 +14,14 @@ public class viewMain extends JFrame{
     private JButton revisiónBasicaButton;
     private JButton revisiónEspecializadaButton;
     private JButton buscarButton;
+    private final ObjectController objectController = new ObjectController();
 
     public viewMain() {
         revisiónBasicaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new viewAutorización(Integer.parseInt(revision_id.getText()), revision_date.getText(),
-                        estado_revision.getText(), "Basica");
+                        estado_revision.getText(), objectController, "Basica");
             }
         });
 
@@ -26,7 +29,7 @@ public class viewMain extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 new viewAutorización(Integer.parseInt(revision_id.getText()), revision_date.getText(),
-                        estado_revision.getText(), "Especializada");
+                        estado_revision.getText(), objectController, "Especializada");
             }
         });
 

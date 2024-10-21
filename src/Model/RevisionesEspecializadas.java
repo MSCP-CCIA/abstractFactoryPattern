@@ -6,7 +6,11 @@ public class RevisionesEspecializadas implements Revisiones{
     public String estado_revision;
     public Object servicio_asignado;
 
-    public RevisionesEspecializadas() {
+    public RevisionesEspecializadas(int revision_id, String revision_date, String estado_revision, Object servicio_asignado) {
+        this.revision_id = revision_id;
+        this.revision_date = revision_date;
+        this.estado_revision = estado_revision;
+        this.servicio_asignado = servicio_asignado;
     }
 
     @Override
@@ -19,7 +23,7 @@ public class RevisionesEspecializadas implements Revisiones{
     @Override
     public Object crearAutorizacion(int examen_id, String nombre_examen, String descripcion_examen,
                                     String fecha_examen, String resultado_examen, int afiliado_id) {
-        return new RevisionesEspeializadasExamen(examen_id,nombre_examen,descripcion_examen,fecha_examen,
+        return new RevisionesEspecializadasExamen(examen_id,nombre_examen,descripcion_examen,fecha_examen,
                 resultado_examen,afiliado_id);
     }
 

@@ -6,7 +6,11 @@ public class RevisionesBasicas implements Revisiones {
     public String estado_revision;
     public Object servicio_asignado;
 
-    public RevisionesBasicas() {
+    public RevisionesBasicas(int revision_id, String revision_date, String estado_revision, Object servicio_asignado) {
+        this.revision_id = revision_id;
+        this.revision_date = revision_date;
+        this.estado_revision = estado_revision;
+        this.servicio_asignado = servicio_asignado;
     }
 
     @Override
